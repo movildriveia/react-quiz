@@ -12,7 +12,6 @@ body {
     GENERAL CONSTANTS
 ======================*/
 
-
 .bck_black {
     background: #3c3c3c;
 }
@@ -138,7 +137,7 @@ header .header_logo_title {
 }
 
 #answers li.right p {
-    color: #fff;   
+    color: #fff;
 }
 
 #answers li.wrong {

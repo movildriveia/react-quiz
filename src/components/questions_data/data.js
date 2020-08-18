@@ -1,73 +1,54 @@
 export default [
     {
-        question: 'We can go for keys when there is possibility that our user could change the data?',
+        question: 'How often do you drink?',
         answers: [
-            'Keys',
-            'Ref',
-            'Both',
-            'None of above'
+            'Once a Week',
+            'Twice a Week',
+            'Three times a Week',
+            'Everyday'
         ],
-        correct: 1
+        correct6: 1,
+        correct4: 2,
+        correct2: 3,
+        correct0: 4
     },
-
     {
-        question: 'JSX is typesafe?',
+        question: 'How much do you drink per Week?',
         answers: [
-            'True',
-            'False',
-            'None of the Above',
-            'Cannot Be Determined'
+            '1 unit',
+            '3 units',
+            '6 units',
+            '12 units'
         ],
-        correct: 1
-    },    
-    {
-        question: 'React merges the object you provide into the current state using which of the following',
-        answers: [
-            'setState()',
-            'State()', 
-            'getState()', 
-            'None of the Above'
-        ],    
-        correct: 1
-    },    
-    {
-        question: 'Arbitrary inputs of components are called?',
-        answers: [
-            'Keys',
-            'Props', 
-            'Elements', 
-            'Ref'
-        ],    
-        correct: 2
+        correct6: 1,
+        correct4: 2,
+        correct2: 3,
+        correct0: 4
     },
     {
-        question: '_____ can be done while more than one element needs to be returned from a component?',
+        question: 'How much do you spend on Alcohol per Week?',
         answers: [
-            'Abstraction',
-            'Packing', 
-            'Insulation', 
-            'Wrapping'
-        ],    
-        correct: 4
+            '10 pounds',
+            '20 pounds',
+            '30 pounds',
+            '50 pounds'
+        ],
+        correct6: 1,
+        correct4: 2,
+        correct2: 3,
+        correct0: 4
     },
     {
-        question: 'Which of the following needs to be updated to achieve dynamic UI updates?',
+        question: 'Do you drink alone',
         answers: [
-            'State',
-            'Props', 
-            'Components', 
-            'None of the Above'
-        ],    
-        correct: 1
-    },
-    {
-        question: 'Lifecycle methods are mainly used _____',
-        answers: [
-            'To keep track of event history',
-            'To enhance components', 
-            'Free up resources', 
-            'None of the Above'
-        ],    
-        correct: 3
+            'never',
+            'most of the time',
+            'occasionally',
+            'always'
+        ],
+        correct6: 1,
+        correct4: 2,
+        correct2: 3,
+        correct0: 4
     }
 ]

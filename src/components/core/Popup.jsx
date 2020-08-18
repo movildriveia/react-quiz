@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 import MyButton from '../util/MyButton.jsx';
 import Fade from 'react-reveal/Fade';
 class Popup extends Component {
-    
+
     constructor(props) {
         super(props);
-        
+
         this.state = {
             time: 'start',
-            title: 'Welcome to React Quiz',
-            text: 'This is a quiz application built using ReactJS. <br /><br />',
-            buttonText: 'Start the quiz' 
+            title: 'Welcome to 1YN🍺 Quiz',
+            text: 'Please complete this Quiz to get to know you 😊 better <br /><br />',
+            buttonText: 'Start the quiz'
         };
-        
+
         this.popupHandle = this.popupHandle.bind(this);
     }
-    
+
     popupHandle() {
         let { time } = this.state;
-        
+
         if(time === 'start'){
             this.setState({
                 time: 'end',
@@ -29,32 +29,29 @@ class Popup extends Component {
             //alert("START THE QUIZ");
             this.props.startQuiz();
         } else {
-            
-            //alert("FINISHED QUIZ");            
+
+            //alert("FINISHED QUIZ");
             location.reload();// restart the application
         }
     }
-     
+
     createMarkup(text) {
         return {__html: text};
     }
-    
+
     componentWillReceiveProps(nextProps) {
         this.setState({
-            text: 'You have completed the quiz. <br /> You got: <strong>' + this.props.score + 
-            '</strong> out of <strong>' + 
-            this.props.total +
-            '</strong> questions right.'
+            text: 'You have completed the quiz. <br /> You got: ' + this.props.score + ' points. <strong>'
         })
     }
 
-    
+
     render() {
-       
+
         let { title, text, buttonText } = this.state;
-        
+
         let { style } = this.props;
-        
+
         return (
             <Fade delay={500}>
                 <div className="popup-container" style={style}>
@@ -79,5 +76,4 @@ class Popup extends Component {
     }
 }
 
-export default Popup; 
-
+export default Popup;

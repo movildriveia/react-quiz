@@ -1,7 +1,7 @@
 {
   "name": "quiz",
   "version": "1.0.0",
-  "description": "A simple Quiz",
+  "description": "1YN🍺 React Quiz App for Alcohol Intake Categorization",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open && node server.js",
@@ -19,8 +19,7 @@
   "keywords": [
     "quiz"
   ],
-  "author": "Jatin Varlyani",
-  "license": "ISC",
+  "author": "Alberto Lebron",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",

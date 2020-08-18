@@ -7,34 +7,37 @@ class Answers extends Component {
             isAnswered: false,
             classNames: ['', '', '', '']
         }
-        
+
         this.checkAnswer = this.checkAnswer.bind(this);
         this.clearClasses = this.clearClasses.bind(this);
     }
-    
+
     checkAnswer(e) {
         let { isAnswered } = this.props;
-        
+
         if(!isAnswered) {
             let elem = e.currentTarget;
-            let { correct, increaseScore } = this.props;
+            let { correct6, correct4, correct2, increaseScore6, increaseScore4, increaseScore2 } = this.props;
             let answer = Number(elem.dataset.id);
             let updatedClassNames = this.state.classNames;
 
-            if(answer === correct){
-                updatedClassNames[answer-1] = 'right';
-                increaseScore();
+            if(answer === correct6){
+                increaseScore6();
             }
-            else {
-                updatedClassNames[answer-1] = 'wrong';
+            else if (answer === correct4){
+                increaseScore4();
             }
-            
+
+            else if (answer === correct2){
+                increaseScore2();
+            }
+
             this.setState({
                 classNames: updatedClassNames,
-                
+
             })
 
-            this.props.showButton();       
+            this.props.showButton();
             var myTime = setTimeout(() => {
                 this.clearClasses();
                 //console.log("IN SET Timeout")
@@ -45,39 +48,39 @@ class Answers extends Component {
         this.setState({
             classNames: ['', '', '', '']
         })
-        
+
     }
     render() {
         let { answers } = this.props;
         let { classNames } = this.state;
-        
+
         let transition = {
             transitionName: "example",
             transitionEnterTimeout: 500,
             transitionLeaveTimeout: 300
         }
-        
+
         return (
             <div id="answers">
                 <ul>
-                    <li onClick={this.checkAnswer} 
+                    <li onClick={this.checkAnswer}
                         className={classNames[0]} data-id="1">
-                    <span>A</span> 
+                    <span>A</span>
                     <p>{answers[0]}</p></li>
 
-                    <li onClick={this.checkAnswer} 
+                    <li onClick={this.checkAnswer}
                         className={classNames[1]} data-id="2">
-                    <span>B</span> 
+                    <span>B</span>
                     <p>{answers[1]}</p></li>
 
-                    <li onClick={this.checkAnswer} 
+                    <li onClick={this.checkAnswer}
                         className={classNames[2]} data-id="3">
-                    <span>C</span> 
+                    <span>C</span>
                     <p>{answers[2]}</p></li>
 
-                    <li onClick={this.checkAnswer} 
+                    <li onClick={this.checkAnswer}
                         className={classNames[3]} data-id="4">
-                    <span>D</span> 
+                    <span>D</span>
                     <p>{answers[3]}</p></li>
                 </ul>
             </div>
